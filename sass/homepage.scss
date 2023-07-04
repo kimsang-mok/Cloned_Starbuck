@@ -1,0 +1,72 @@
+.box {
+    display: flex;
+    background-color: #eb81a5;
+    margin: 30px 0;
+}
+
+.drinks {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.content-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.content {
+    flex: 0.8;
+    padding: 32px 40px;
+    text-align: center;
+
+
+    h1 {
+        margin-top: 40px;
+        font-size: 48px;
+        letter-spacing: 4px;
+        margin-bottom: 24px;
+    }
+
+    p {
+        font-size: 24px;
+
+    }
+
+    button {
+        margin-top: 32px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 768px) {
+    .box {
+        flex-direction: column-reverse;
+    }
+
+    .content-container {
+        .content {
+            flex: 1;
+            padding: 32px 16px;
+
+            h1 {
+                margin-top: 0;
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 22px;
+            }
+
+            button {
+                margin-top: 16px;
+                font-size: 14px;
+            }
+        }
+    }
+
+}

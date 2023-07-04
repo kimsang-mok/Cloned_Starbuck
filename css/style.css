@@ -10,3 +10,5 @@ html {
     font-size: 10px;
     font-family: 'Sodo Sans Semibold';
 }
+
+@import "./navigation.cssß"
