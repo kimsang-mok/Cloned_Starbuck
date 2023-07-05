@@ -1,0 +1,14 @@
+{
+  "name": "starbuck-nav",
+  "version": "1.0.0",
+  "description": "cloned starbuck website",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass-starbuck": "node-sass ./sass/main.scss  ./css/main.css -w"
+  },
+  "author": "kimsang",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
