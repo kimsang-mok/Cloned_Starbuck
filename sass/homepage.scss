@@ -1,6 +1,12 @@
+main {
+    box-shadow: 0 4px 2px -2px rgb(174, 170, 170);
+}
+
 .box {
     display: flex;
     margin: 32px 0;
+
+
 }
 
 #box1 {
@@ -19,6 +25,42 @@
         margin-top: 20px;
         font-size: 16px;
     }
+
+    .drinks {
+        background-color: #006340;
+    }
+}
+
+#box3 {
+    background-color: #8f8bf4;
+}
+
+#box4 {
+    background-color: #cbe678;
+
+    .drinks {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+#box5 {
+    background-color: #e1fccd;
+
+    .drinks {
+        background-color: #009e75;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 19px;
+    }
+
 }
 
 
@@ -60,11 +102,23 @@
 
     button {
         display: block;
-        width: 10em;
+        width: 8em;
         align-self: center;
         margin-top: 32px;
         font-size: 16px;
         font-weight: 500;
+    }
+}
+
+.note {
+    display: flex;
+    justify-content: center;
+    padding: 32px 0;
+    text-align: center;
+    font-size: 14px;
+
+    p {
+        flex: 0.6;
     }
 }
 
@@ -87,6 +141,7 @@
                 font-size: 28px;
                 letter-spacing: 0;
                 margin-bottom: 0;
+                font-weight: 500;
             }
 
             p {
