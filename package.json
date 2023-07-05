@@ -4,7 +4,8 @@
   "description": "cloned starbuck website",
   "main": "index.js",
   "scripts": {
-    "compile:sass-starbuck": "node-sass ./sass/main.scss  ./css/main.css -w"
+    "compile:sass-starbuck": "node-sass ./sass/main.scss  ./css/main.css -w",
+    "compile:sass-gift-cards": "node-sass ./sass/gift_cards.scss  ./css/gift_cards.css -w"
   },
   "author": "kimsang",
   "license": "ISC",
