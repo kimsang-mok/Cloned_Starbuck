@@ -293,8 +293,36 @@ main {
       font-size: 22px; }
     .content-container .content button {
       margin-top: 16px;
-      font-size: 14px; } }
+      font-size: 14px; }
+  .note {
+    margin: 0 16px; }
+    .note p {
+      flex: 1; } }
 
 @media (max-width: 1024px) {
   .content h1 {
     font-size: 28px; } }
+
+.footer-1 {
+  padding: 24px 40px;
+  display: flex; }
+
+.footer-container {
+  flex: .9;
+  display: flex; }
+  .footer-container section {
+    margin-left: 16px;
+    flex: 1;
+    width: 190; }
+    .footer-container section h2 {
+      font-size: 19px;
+      font-weight: 400;
+      margin-bottom: 24px; }
+    .footer-container section ul {
+      font-size: 16px;
+      font-weight: 100;
+      line-height: 3; }
+      .footer-container section ul li a {
+        text-decoration: none; }
+  .footer-container section:first-child {
+    margin-left: 0; }
