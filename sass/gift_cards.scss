@@ -12,7 +12,9 @@ html {
 }
 
 .main__container {
+    position: relative;
     padding: 0 40px 0 130px;
+    
 }
 
 
@@ -23,25 +25,48 @@ html {
     justify-content: space-between;
     align-items: center;
     font-weight: 700;
-    font-size: 1.9rem;
-    margin-bottom: 3rem;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
 
-    &-see-all {
+    &-right {
         color: #00754A;
         cursor: pointer;
     }
 }
 
-.feature__cards {
-    min-width: 340vw;
-    height: auto;
+.cards {
     display: flex;
-    gap: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 350vw;
+}
+
+.gift-card {
+    
+    margin-right: 2.5vw; 
 }
 
 .card {
-    border-radius: 1rem;
+    border-radius: 1.5rem;
     box-shadow: 0 6px 6px rgba(0,0,0,.14);
     width: 100%;
-    height: 100%;
+}
+
+
+// ||| BLOG 1
+
+.get-gift-card {
+    padding-left: 0;
+    margin-left: 0;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: #D4E9E2;
+    width: 100%;
+    margin-top: 3rem;
+    padding: 20px 0px;
+}
+
+.blog-container-1 {
+    display: flex;
+    justify-content: space-between;
 }
