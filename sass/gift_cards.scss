@@ -19,12 +19,15 @@ img {
 
 .main-container {
     display: grid;
-    grid-template-rows: repeat(14, min-content);
+    grid-template-rows: min-content 1fr repeat(12, min-content) 1fr 1fr;
     grid-template-columns: [full-start] 1fr repeat(9, [col-start] minmax(min-content, 1fr) [col-end] ) [full-end];
 }
 
 button {
     border: none;
+    border: 1px solid #000;
+    border-radius: 2rem;
+    font-size: 1.8rem;
 }
 
 // ||| CARD-SECTIONS
@@ -32,6 +35,7 @@ button {
 .cards {
     grid-column: col-start / col-end 9;
     position: relative;
+    margin-top: 1.9rem;
 
     &__items {
         display: flex;
@@ -39,11 +43,12 @@ button {
         align-items: center;
         overflow: hidden;
         margin: 1.9rem 0;
+        padding: 1rem 0;
     }
 
 
     &__text {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         padding-right: 40px;
         display: flex;
         justify-content: space-between;
@@ -56,6 +61,12 @@ button {
             letter-spacing: 0.1em;
         }
 
+        &--see-all {
+            cursor: hover;
+            color: #00754A;
+            font-weight: 700;
+        }
+
     }
 
 
@@ -66,6 +77,7 @@ button {
         margin-right: 3.2rem;
         cursor: pointer;
         border-radius: 1.5rem;
+        box-shadow: 0 6px 6px rgba(0,0,0,.14);
     }
 
     &__button {
@@ -89,10 +101,12 @@ button {
         }
 
         &--right {
+            border: none;
             right: 20px;
         }
 
         &--left {
+            border: none;
             left: -20px;
         }
     }
@@ -100,16 +114,19 @@ button {
 
 
 
-// ||| TEXT-CARD-GIFTS-SECTIONS
+
+// ||| TEXT-GIFT-CARDS-SECTIONS
 
 .text__cards-gift {
-    background-color: lime;
+    background-color: #D4E9E2;
 
     grid-column: col-start / full-end;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-right: 40px;
+    padding-right: 30px;
+    height: 117.09px;
+    margin-bottom: 1.9rem;
 
     &-left {
         display: flex;
@@ -119,16 +136,86 @@ button {
         &-got-a-gift-card {
             font-size: 2.4rem;
             font-weight: bold;
-            padding-right: 40px;
+            margin-right: 30px;
+        }
+
+        &-earns-star {
+            font-size: 1.9rem;
+            color: darkgrey;
+            margin-right: 3rem;
+            font-weight: 100;
+        }
+
+        &-btn-left {
+            background-color: #D4E9E2;
+            color: #000;
+            padding: 0.5rem 1rem;
+            margin-right: 1rem;;
+
+            &:hover {
+                cursor: pointer;
+                background-color: rgba(0, 0, 0, 0.042);
+                transition: all 0.2s ease;
+            }
+        }
+
+        &-btn-right {
+            color: #fff;
+            background-color: #000;
+            padding: 0.5rem 1rem;
+
+            &:hover {
+                cursor: pointer;
+                background-color: rgba(0, 0, 0, 0.764);
+                transition: all 0.2s ease;
+            }
+
+        }
+
+    }
+
+    &-right {
+        display: flex;
+        align-items: center;
+        font-size: 1.6rem;
+        color: #00754A;
+    }
+
+}
+
+
+// ||| TEXT-BULK-GIFT-CARDS-SECTION
+
+.text__bulk-gift-cards {
+    grid-column: col-start / full-end;
+
+    display: grid;
+    grid-template-columns: minmax(min-content, 150px) 5rem repeat(3, minmax(min-content, 150px)) 1fr;
+    grid-template-rows: 56px min-content 56px;
+
+    &-img {
+        grid-row: 2 / 3;
+        width: 375px;
+        &-1 {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
+    
+    &-text {
+        grid-column: 3 / 6;
+        grid-row: 2 / 3;
+    }
+
 }
 
 
 // ||| HELPER BLANK
 
 .helper-blank-1 {
-    background-color: lime;
+    background-color: #D4E9E2;
     grid-column: full-start / col-start;
     grid-row: 2 / 3;
+    height: 117.09px;
 }

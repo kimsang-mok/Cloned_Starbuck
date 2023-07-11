@@ -14,23 +14,28 @@ img {
 
 .main-container {
   display: grid;
-  grid-template-rows: repeat(14, min-content);
+  grid-template-rows: min-content 1fr repeat(12, min-content) 1fr 1fr;
   grid-template-columns: [full-start] 1fr repeat(9, [col-start] minmax(min-content, 1fr) [col-end]) [full-end]; }
 
 button {
-  border: none; }
+  border: none;
+  border: 1px solid #000;
+  border-radius: 2rem;
+  font-size: 1.8rem; }
 
 .cards {
   grid-column: col-start / col-end 9;
-  position: relative; }
+  position: relative;
+  margin-top: 1.9rem; }
   .cards__items {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     overflow: hidden;
-    margin: 1.9rem 0; }
+    margin: 1.9rem 0;
+    padding: 1rem 0; }
   .cards__text {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     padding-right: 40px;
     display: flex;
     justify-content: space-between;
@@ -40,13 +45,18 @@ button {
       text-transform: uppercase;
       font-weight: 700;
       letter-spacing: 0.1em; }
+    .cards__text--see-all {
+      cursor: hover;
+      color: #00754A;
+      font-weight: 700; }
   .cards__img {
     width: calc(100% / 4.7);
     height: 100%;
     object-fit: cover;
     margin-right: 3.2rem;
     cursor: pointer;
-    border-radius: 1.5rem; }
+    border-radius: 1.5rem;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.14); }
   .cards__button {
     position: absolute;
     top: 50%;
@@ -63,17 +73,21 @@ button {
         width: 2rem;
         height: 2rem; }
     .cards__button--right {
+      border: none;
       right: 20px; }
     .cards__button--left {
+      border: none;
       left: -20px; }
 
 .text__cards-gift {
-  background-color: lime;
+  background-color: #D4E9E2;
   grid-column: col-start / full-end;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 40px; }
+  padding-right: 30px;
+  height: 117.09px;
+  margin-bottom: 1.9rem; }
   .text__cards-gift-left {
     display: flex;
     justify-content: space-between;
@@ -81,9 +95,53 @@ button {
     .text__cards-gift-left-got-a-gift-card {
       font-size: 2.4rem;
       font-weight: bold;
-      padding-right: 40px; }
+      margin-right: 30px; }
+    .text__cards-gift-left-earns-star {
+      font-size: 1.9rem;
+      color: darkgrey;
+      margin-right: 3rem;
+      font-weight: 100; }
+    .text__cards-gift-left-btn-left {
+      background-color: #D4E9E2;
+      color: #000;
+      padding: 0.5rem 1rem;
+      margin-right: 1rem; }
+      .text__cards-gift-left-btn-left:hover {
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.042);
+        transition: all 0.2s ease; }
+    .text__cards-gift-left-btn-right {
+      color: #fff;
+      background-color: #000;
+      padding: 0.5rem 1rem; }
+      .text__cards-gift-left-btn-right:hover {
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.764);
+        transition: all 0.2s ease; }
+  .text__cards-gift-right {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    color: #00754A; }
+
+.text__bulk-gift-cards {
+  grid-column: col-start / full-end;
+  display: grid;
+  grid-template-columns: minmax(min-content, 150px) 5rem repeat(3, minmax(min-content, 150px)) 1fr;
+  grid-template-rows: 56px min-content 56px; }
+  .text__bulk-gift-cards-img {
+    grid-row: 2 / 3;
+    width: 375px; }
+    .text__bulk-gift-cards-img-1 {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .text__bulk-gift-cards-text {
+    grid-column: 3 / 6;
+    grid-row: 2 / 3; }
 
 .helper-blank-1 {
-  background-color: lime;
+  background-color: #D4E9E2;
   grid-column: full-start / col-start;
-  grid-row: 2 / 3; }
+  grid-row: 2 / 3;
+  height: 117.09px; }
