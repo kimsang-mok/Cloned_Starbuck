@@ -19,7 +19,7 @@ img {
 
 .main-container {
     display: grid;
-    grid-template-rows: min-content 1fr repeat(12, min-content) 1fr 1fr;
+    grid-template-rows: repeat(2 / min-content) repeat(12, min-content) 1fr;
     grid-template-columns: [full-start] 1fr repeat(9, [col-start] minmax(min-content, 1fr) [col-end] ) [full-end];
 }
 
@@ -28,6 +28,12 @@ button {
     border: 1px solid #000;
     border-radius: 2rem;
     font-size: 1.8rem;
+    cursor: pointer;
+    padding: 7px 16px;
+
+    &:hover {
+        transition: all 0.2s ease;
+    }
 }
 
 // ||| CARD-SECTIONS
@@ -39,7 +45,7 @@ button {
 
     &__items {
         display: flex;
-        justify-content: flex-start;
+        justify-content: fl ex-start;
         align-items: center;
         overflow: hidden;
         margin: 1.9rem 0;
@@ -67,7 +73,7 @@ button {
             font-weight: 700;
         }
 
-    }
+    } 
 
 
     &__img {
@@ -92,9 +98,12 @@ button {
             border-radius: 50%;
             background-color: #fff;
             box-shadow: 0 0 6px rgba(0,0,0,.24), 0 8px 12px rgba(0,0,0,.14);
+            position: relative;
 
             &-icon {
-                padding-top: 3.1px;
+                position: absolute;
+                left: 0.8rem;
+                top: 0.8rem;
                 width: 2rem;
                 height: 2rem;
             }
@@ -102,12 +111,12 @@ button {
 
         &--right {
             border: none;
-            right: 20px;
+            right: 10px;
         }
 
         &--left {
             border: none;
-            left: -20px;
+            left: -10px;
         }
     }
 }
@@ -115,7 +124,7 @@ button {
 
 
 
-// ||| TEXT-GIFT-CARDS-SECTIONS
+// ||| GET-A-GIFT-CARDS-SECTIONS
 
 .text__cards-gift {
     background-color: #D4E9E2;
@@ -126,7 +135,7 @@ button {
     align-items: center;
     padding-right: 30px;
     height: 117.09px;
-    margin-bottom: 1.9rem;
+    margin: 16px 0;
 
     &-left {
         display: flex;
@@ -153,9 +162,7 @@ button {
             margin-right: 1rem;;
 
             &:hover {
-                cursor: pointer;
                 background-color: rgba(0, 0, 0, 0.042);
-                transition: all 0.2s ease;
             }
         }
 
@@ -165,9 +172,7 @@ button {
             padding: 0.5rem 1rem;
 
             &:hover {
-                cursor: pointer;
                 background-color: rgba(0, 0, 0, 0.764);
-                transition: all 0.2s ease;
             }
 
         }
@@ -184,18 +189,20 @@ button {
 }
 
 
-// ||| TEXT-BULK-GIFT-CARDS-SECTION
+// ||| BULK-GIFT-CARDS-SECTION
 
 .text__bulk-gift-cards {
+    background-color: #F9F9F9;
     grid-column: col-start / full-end;
 
     display: grid;
-    grid-template-columns: minmax(min-content, 150px) 5rem repeat(3, minmax(min-content, 150px)) 1fr;
+    grid-template-columns: minmax(min-content, 150px) 5rem repeat(2, minmax(min-content, 150px))  1fr 1fr;
     grid-template-rows: 56px min-content 56px;
 
     &-img {
         grid-row: 2 / 3;
         width: 375px;
+
         &-1 {
             width: 100%;
             height: 100%;
@@ -204,12 +211,80 @@ button {
     }
     
     &-text {
-        grid-column: 3 / 6;
+        grid-column: 3 / 5;
         grid-row: 2 / 3;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-evenly;
+
+        &-h3 {
+            font-size: 2.4rem;
+
+        }
+
+        &-p {
+            font-size: 1.6rem;
+            font-weight: 100;
+        }
+
+        &-btn {
+            background-color: #F9F9F9;
+            padding: 0.5rem 1rem;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.042);
+            }
+        }
     }
 
 }
 
+// ||| CARDS-SUPPORT-SECTION
+
+.cards-support {
+    grid-column: col-start / full-end;
+    height: 224px;
+    padding: 40px 0;
+    background-color: #EDEBE9;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+ 
+
+    &__text-container {
+
+    }
+
+    &__h3 {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+    }
+
+    &__p {
+        font-size: 1.6rem;
+        max-width: 400px;
+        padding: 8px 0px;
+    }
+
+    &__btn {
+       
+        &-1 {
+            margin: 1.6rem 1.6rem 0px 0px;
+        }
+
+        &-2 {
+            margin: 1.6rem 1.6rem 0px 0px;
+        }
+
+        &-3 {
+            margin: 1.6rem 1.6rem 0px 0px;
+        }
+    }
+}
 
 // ||| HELPER BLANK
 
@@ -217,5 +292,17 @@ button {
     background-color: #D4E9E2;
     grid-column: full-start / col-start;
     grid-row: 2 / 3;
-    height: 117.09px;
+    margin: 16px 0;
+}
+
+.helper-blank-2 {
+    background-color: #F9F9F9;
+    grid-column: full-start / col-start;
+    grid-row: 14 / 15;
+}
+
+.helper-blank-3 {
+    background-color: #EDEBE9;
+    grid-column: full-start / col-start;
+    grid-row: 15 / 16;
 }
