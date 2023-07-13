@@ -1,0 +1,26 @@
+main {
+    display: grid;
+    margin: 40px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+
+    .content-container {
+        grid-column: 1 / 2;
+    }
+
+    .image-container {
+        grid-column: 2 / 3;
+        display: flex;
+
+        img {
+            flex: 1;
+        }
+
+    }
+}

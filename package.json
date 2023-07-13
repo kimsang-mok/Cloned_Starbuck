@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "compile:sass-starbuck": "node-sass ./sass/main.scss  ./css/main.css -w",
-    "compile:sass-starbucks-rewards": "node-sass ./sass/rewards.scss  ./css/rewards.css -w"
+    "compile:sass-starbucks-rewards": "node-sass ./sass/rewards.scss  ./css/rewards.css -w",
+    "compile:sass-homepage-grid": "node-sass ./sass/homepage_grid.scss ./css/homepage_grid.css -w"
   },
   "author": "kimsang",
   "license": "ISC",
